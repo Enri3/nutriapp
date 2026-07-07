@@ -1,0 +1,18 @@
+01 Login
+02 Registro
+03 Inicio
+04 Listado de Recetas
+05 Detalle de Receta
+06 Crear/Editar Receta
+07 Plan Semanal
+08 Plan Diario
+09 Planificar Comida
+10 Imprimir Planificacion
+11 Lista de Compras
+12 Agregar Alimento
+13 Imprimir Lista de Compras
+14 Ver/Editar Perfil
+15 Configuración
+16 Mis recetas
+17 Listado de alimentos
+18 Detalle alimento
