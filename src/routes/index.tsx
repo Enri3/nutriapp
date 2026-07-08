@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AuthLayout from "../layouts/auth-layout";
-import MainLayout from "../layouts/main_layout";
+//import MainLayout from "../layouts/main_layout";
+import MainLayout from "@/layouts/main_layout";
 
 import LoginPage from "../pages/login/login_page";
 import RegistroPage from "../pages/registro/registro_page";

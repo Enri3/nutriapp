@@ -1,9 +1,15 @@
-import React from "react";
+import RecipeCard from "@/components/recetas/recipe_card";
 
 export default function InicioPage() {
-	return (
-		<div className="bg-green-500 text-white p-4">
-			<h1>Inicio</h1>
-		</div>
-	);
+  return (
+    <div className="p-4">
+      <RecipeCard
+        id={1}
+        nombre="Milanesas al horno"
+        categoria="Almuerzo"
+        tiempoPreparacion={45}
+        dificultad="Fácil"
+      />
+    </div>
+  );
 }
