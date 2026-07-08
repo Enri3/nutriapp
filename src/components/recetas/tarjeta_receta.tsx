@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 
-interface RecipeCardProps {
+interface TarjetaRecetaProps {
   id: number;
   nombre: string;
   imagenUrl?: string;
@@ -9,13 +9,13 @@ interface RecipeCardProps {
   dificultad: string;
 }
 
-export default function RecipeCard({
+export default function TarjetaReceta({
   nombre,
   imagenUrl,
   categoria,
   tiempoPreparacion,
   dificultad,
-}: RecipeCardProps) {
+}: TarjetaRecetaProps) {
   return (
     <Card className="overflow-hidden">
       <div className="h-48 bg-gray-200">

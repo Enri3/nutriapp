@@ -1,17 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import AuthLayout from "../layouts/auth-layout";
-//import MainLayout from "../layouts/main_layout";
+import AuthLayout from "@/layouts/auth_layout";
 import MainLayout from "@/layouts/main_layout";
 
-import LoginPage from "../pages/login/login_page";
-import RegistroPage from "../pages/registro/registro_page";
-import InicioPage from "../pages/inicio/inicio_page";
+import LoginPage from "@/pages/login/login_page";
+import RegistroPage from "@/pages/registro/registro_page";
+import InicioPage from "@/pages/inicio/inicio_page";
 
-import ListadoRecetasPage from "../pages/recetas/listado_recetas_page";
-import PlanSemanalPage from "../pages/planificacion/plan_semanal_page";
-import ListaComprasPage from "../pages/compras/lista_compras_page";
-import PerfilPage from "../pages/perfil/perfil_page";
+import ListadoRecetasPage from "@/pages/recetas/listado_recetas_page";
+import PlanSemanalPage from "@/pages/planificacion/plan_semanal_page";
+import ListaComprasPage from "@/pages/compras/lista_compras_page";
+import PerfilPage from "@/pages/perfil/perfil_page";
 
 export default function AppRoutes() {
   return (
