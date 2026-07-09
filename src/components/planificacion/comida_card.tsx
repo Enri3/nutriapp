@@ -4,27 +4,53 @@ interface TarjetaComidaProps {
   tipoComida: string;
   nombreReceta: string;
   porciones: number;
+  ingredientes: Array<{
+    nombre: string;
+    cantidad: number;
+    unidad: string;
+  }>;
 }
 
 export default function TarjetaComida({
   tipoComida,
   nombreReceta,
   porciones,
+  ingredientes,
 }: TarjetaComidaProps) {
   return (
-    <Card size="sm" className="border-border/70 shadow-sm">
-      <CardContent className="space-y-1.5 p-4">
-        <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+    <Card size="sm" className="border-border/70 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
+      <CardContent className="space-y-3 p-4">
+        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
           {tipoComida}
         </p>
 
-        <h3 className="text-base font-semibold leading-tight">
+        <h3 className="text-lg font-semibold leading-tight text-balance">
           {nombreReceta}
         </h3>
 
         <p className="text-sm text-muted-foreground">
           {porciones} porciones
         </p>
+
+        <div className="space-y-2 rounded-2xl bg-muted/60 p-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+            Ingredientes
+          </p>
+
+          <ul className="space-y-1.5 text-sm">
+            {ingredientes.slice(0, 4).map((ingrediente) => (
+              <li
+                key={ingrediente.nombre}
+                className="flex items-center justify-between gap-3 text-foreground"
+              >
+                <span className="truncate">{ingrediente.nombre}</span>
+                <span className="shrink-0 text-muted-foreground">
+                  {ingrediente.cantidad} {ingrediente.unidad}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </CardContent>
     </Card>
   );

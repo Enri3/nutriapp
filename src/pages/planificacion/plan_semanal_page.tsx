@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import DiaCard from "@/components/planificacion/dia_card";
 import EncabezadoPagina from "@/components/headers/page_header";
 import { semana_mock } from "@/mocks/planificacion.mock";
@@ -18,11 +20,18 @@ export default function PlanSemanalPage() {
 
       <section className="grid gap-3">
         {semana_mock.map((dia) => (
-          <DiaCard
+          <Link
             key={dia.dia}
-            dia={dia.dia}
-            cantidad_comidas={dia.cantidad_comidas}
-          />
+            to="/plan_diario"
+            state={{ dia, comidaDia: dia.comidas }}
+            className="block"
+          >
+            <DiaCard
+              dia={dia.dia}
+              cantidad_comidas={dia.cantidad_comidas}
+              comidas={dia.comidas}
+            />
+          </Link>
         ))}
       </section>
     </div>

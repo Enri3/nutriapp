@@ -4,6 +4,7 @@ import InformacionNutricional from "@/components/planificacion/informacion_nutri
 import { Card, CardContent } from "@/components/ui/card";
 
 import { recetasMock } from "@/mocks/recetas.mock";
+import { comidas_dia_mock } from "@/mocks/plan_diario.mock";
 
 import { NavLink } from "react-router-dom";
 
@@ -43,9 +44,10 @@ export default function InicioPage() {
           </div>
 
           <ComidaCard
-            tipoComida="Almuerzo"
-            nombreReceta="Pollo con arroz"
-            porciones={2}
+            tipoComida={comidas_dia_mock[1].tipo_comida}
+            nombreReceta={comidas_dia_mock[1].nombre_receta}
+            porciones={comidas_dia_mock[1].porciones}
+            ingredientes={comidas_dia_mock[1].ingredientes}
           />
         </CardContent>
         </NavLink>

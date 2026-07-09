@@ -1,25 +1,60 @@
+import { useLocation } from "react-router-dom";
+
 import ComidaCard from "@/components/planificacion/comida_card";
 import InformacionNutricional from "@/components/planificacion/informacion_nutricional";
 import EncabezadoPagina from "@/components/headers/page_header";
 
 import { comidas_dia_mock } from "@/mocks/plan_diario.mock";
 
+interface EstadoPlanDiario {
+  dia?: {
+    dia: string;
+    cantidad_comidas: number;
+    comidas: Array<{
+      tipo_comida: string;
+      nombre_receta: string;
+      porciones: number;
+      ingredientes: Array<{
+        nombre: string;
+        cantidad: number;
+        unidad: string;
+      }>;
+    }>;
+  };
+  comidaDia?: Array<{
+    tipo_comida: string;
+    nombre_receta: string;
+    porciones: number;
+    ingredientes: Array<{
+      nombre: string;
+      cantidad: number;
+      unidad: string;
+    }>;
+  }>;
+}
+
 export default function PlanDiarioPage() {
+  const ubicacion = useLocation();
+  const estado = ubicacion.state as EstadoPlanDiario | null;
+  const comidasDelDia = estado?.comidaDia ?? comidas_dia_mock;
+  const nombreDelDia = estado?.dia?.dia ?? "Plan diario";
+
   return (
     <div className="space-y-4 pb-2">
       <EncabezadoPagina
         subtitulo="Planificación"
-        titulo="Plan diario"
+        titulo={nombreDelDia}
         descripcion="Detalle del día con las comidas programadas y el resumen nutricional."
       />
 
       <section className="space-y-3">
-        {comidas_dia_mock.map((comida) => (
+        {comidasDelDia.map((comida) => (
           <ComidaCard
             key={comida.tipo_comida}
             tipoComida={comida.tipo_comida}
             nombreReceta={comida.nombre_receta}
             porciones={comida.porciones}
+            ingredientes={comida.ingredientes}
           />
         ))}
       </section>
