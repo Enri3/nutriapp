@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import AuthHeader from "@/components/auth/auth_header";
+import AuthHeader from "@/components/headers/auth_header";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

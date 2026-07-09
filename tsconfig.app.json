@@ -23,7 +23,6 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Para instalar Shadcn UI */
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
