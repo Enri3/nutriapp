@@ -5,6 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 
 import { recetasMock } from "@/mocks/recetas.mock";
 
+import { NavLink } from "react-router-dom";
+
 export default function InicioPage() {
   return (
     <div className="space-y-4 pb-2">
@@ -23,6 +25,7 @@ export default function InicioPage() {
       </section>
 
       <Card>
+        <NavLink to="/plan_diario">
         <CardContent className="space-y-3 p-4">
           <div className="flex items-center justify-between gap-3">
             <div>
@@ -45,6 +48,7 @@ export default function InicioPage() {
             porciones={2}
           />
         </CardContent>
+        </NavLink>
       </Card>
 
       <Card>

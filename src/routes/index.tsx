@@ -11,6 +11,7 @@ import ListadoRecetasPage from "@/pages/recetas/listado_recetas_page";
 import PlanSemanalPage from "@/pages/planificacion/plan_semanal_page";
 import ListaComprasPage from "@/pages/compras/lista_compras_page";
 import PerfilPage from "@/pages/perfil/perfil_page";
+import PlanDiarioPage from "@/pages/planificacion/plan_diario_page";
 
 export default function AppRoutes() {
   return (
@@ -30,6 +31,7 @@ export default function AppRoutes() {
           <Route path="/plan" element={<PlanSemanalPage />} />
           <Route path="/compras" element={<ListaComprasPage />} />
           <Route path="/perfil" element={<PerfilPage />} />
+          <Route path="/plan_diario" element={<PlanDiarioPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
