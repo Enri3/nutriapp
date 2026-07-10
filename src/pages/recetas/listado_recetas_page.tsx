@@ -1,14 +1,32 @@
 import { Search } from "lucide-react";
+import { useState } from "react";
 
 import RecetaCard from "@/components/recetas/receta_card";
+import FiltroRecetas from "@/components/recetas/filtro";
 import EncabezadoPagina from "@/components/headers/page_header";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+
 import { recetasMock } from "@/mocks/recetas.mock";
 
-const filtros = ["Todas", "Desayuno", "Almuerzo", "Cena"];
+const filtros = [
+  { id: "sandwich", nombre: "Sandwich", icono: "🥪" },
+  { id: "pasta", nombre: "Pasta", icono: "🍝" },
+  { id: "pizza", nombre: "Pizza", icono: "🍕" },
+  { id: "ensalada", nombre: "Ensalada", icono: "🥗" },
+  { id: "carne", nombre: "Carne", icono: "🥩" },
+  { id: "pollo", nombre: "Pollo", icono: "🍗" },
+  { id: "pescado", nombre: "Pescado", icono: "🐟" },
+  { id: "postre", nombre: "Postre", icono: "🍰" },
+  { id: "bebida", nombre: "Bebida", icono: "🥤" },
+  { id: "snack", nombre: "Snack", icono: "🍿" },
+];
 
 export default function ListadoRecetasPage() {
+  const [filtro_seleccionado, set_filtro_seleccionado] =
+    useState("sandwich");
+
   return (
     <div className="space-y-4 pb-2">
       <EncabezadoPagina
@@ -28,21 +46,11 @@ export default function ListadoRecetasPage() {
             />
           </label>
 
-          <div className="flex gap-2 overflow-x-auto pb-1">
-            {filtros.map((filtro, index) => (
-              <span
-                key={filtro}
-                className={[
-                  "shrink-0 rounded-full px-3 py-1.5 text-xs font-medium",
-                  index === 0
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-muted text-muted-foreground",
-                ].join(" ")}
-              >
-                {filtro}
-              </span>
-            ))}
-          </div>
+          <FiltroRecetas
+            filtros={filtros}
+            filtro_seleccionado={filtro_seleccionado}
+            on_cambiar_filtro={set_filtro_seleccionado}
+          />
         </CardContent>
       </Card>
 
