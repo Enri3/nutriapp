@@ -1,7 +1,7 @@
 import { ShoppingBasket } from "lucide-react";
 
 import ItemCompra from "@/components/compras/item_compra";
-import EncabezadoPagina from "@/components/headers/page_header";
+import EncabezadoPagina from "@/components/headers/page";
 import { Card, CardContent } from "@/components/ui/card";
 import { comprasMock } from "@/mocks/compras.mock";
 

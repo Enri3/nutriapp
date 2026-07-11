@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import RecetaCard from "@/components/recetas/receta_card";
 import FiltroRecetas from "@/components/recetas/filtro";
-import EncabezadoPagina from "@/components/headers/page_header";
+import EncabezadoPagina from "@/components/headers/page";
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -33,6 +33,8 @@ export default function ListadoRecetasPage() {
         subtitulo="Catálogo"
         titulo="Recetas"
         descripcion="Busca y revisa recetas listas para usar en tu plan."
+        texto_accion="Agregar receta"
+        ruta_accion="/agregar_receta"
       />
 
       <Card>

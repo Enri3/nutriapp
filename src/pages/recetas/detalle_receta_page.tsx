@@ -1,7 +1,7 @@
 import IngredienteItem from "@/components/recetas/ingrediente";
 import PasoReceta from "@/components/recetas/paso";
 import InformacionNutricional from "@/components/planificacion/informacion_nutricional";
-import EncabezadoPagina from "@/components/headers/page_header";
+import EncabezadoPagina from "@/components/headers/page";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -21,6 +21,8 @@ export default function DetalleRecetaPage() {
         subtitulo={receta.categoria}
         titulo={receta.nombre}
         descripcion={receta.descripcion}
+        texto_accion="Editar receta"
+        ruta_accion="/editar_receta"
       />
 
       <Card>

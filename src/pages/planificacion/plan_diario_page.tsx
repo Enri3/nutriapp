@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 
 import ComidaCard from "@/components/planificacion/comida_card";
 import InformacionNutricional from "@/components/planificacion/informacion_nutricional";
-import EncabezadoPagina from "@/components/headers/page_header";
+import EncabezadoPagina from "@/components/headers/page";
 
 import { comidas_dia_mock } from "@/mocks/plan_diario.mock";
 
@@ -46,6 +46,8 @@ export default function PlanDiarioPage() {
         subtitulo="Planificación"
         titulo={nombreDelDia}
         descripcion="Detalle del día con las comidas programadas y el resumen nutricional."
+        texto_accion="Cargar comida"
+        ruta_accion="/planificar_comida"
       />
 
       <section className="space-y-3">

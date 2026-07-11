@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
-import DiaCard from "@/components/planificacion/dia_card";
-import EncabezadoPagina from "@/components/headers/page_header";
+import EncabezadoPagina from "@/components/headers/page";
 import { semana_mock } from "@/mocks/planificacion.mock";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
@@ -18,6 +17,8 @@ export default function PlanSemanalPage() {
             7 días
           </span>
         }
+        texto_accion="Agregar comida"
+        ruta_accion="/planificar_comida"
       />
 
       <section className="space-y-3">
