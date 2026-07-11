@@ -5,13 +5,14 @@ import MainLayout from "@/layouts/main_layout";
 
 import LoginPage from "@/pages/login/login_page";
 import RegistroPage from "@/pages/registro/registro_page";
-import InicioPage from "@/pages/inicio/inicio_page";
+//import InicioPage from "@/pages/inicio/inicio_page";
 
 import ListadoRecetasPage from "@/pages/recetas/listado_recetas_page";
 import PlanSemanalPage from "@/pages/planificacion/plan_semanal_page";
 import ListaComprasPage from "@/pages/compras/lista_compras_page";
 import PerfilPage from "@/pages/perfil/perfil_page";
 import PlanDiarioPage from "@/pages/planificacion/plan_diario_page";
+import DetalleRecetaPage from "@/pages/recetas/detalle_receta_page";
 
 export default function AppRoutes() {
   return (
@@ -26,12 +27,13 @@ export default function AppRoutes() {
 
         {/* Privadas */}
         <Route element={<MainLayout />}>    
-          <Route path="/inicio" element={<InicioPage />} />
+          {/* <Route path="/inicio" element={<InicioPage />} /> */}
           <Route path="/recetas" element={<ListadoRecetasPage />} />
           <Route path="/plan" element={<PlanSemanalPage />} />
           <Route path="/compras" element={<ListaComprasPage />} />
           <Route path="/perfil" element={<PerfilPage />} />
-          <Route path="/plan_diario" element={<PlanDiarioPage />} />
+          <Route path="/inicio" element={<PlanDiarioPage />} />
+          <Route path="/recetas/:id" element={<DetalleRecetaPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

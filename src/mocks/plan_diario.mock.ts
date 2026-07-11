@@ -3,6 +3,7 @@ import { recetaMock2 } from "./recetas.mock";
 
 export const comidas_dia_mock = [
   {
+    receta_id: 1,
     tipo_comida: "Desayuno",
     nombre_receta: "Avena con frutas",
     porciones: 1,
@@ -14,12 +15,14 @@ export const comidas_dia_mock = [
     ],
   },
   {
+    receta_id: 2,
     tipo_comida: recetaMock1.categoria,
     nombre_receta: recetaMock1.nombre,
     porciones: 1,
     ingredientes: recetaMock1.ingredientes,
   },
   {
+    receta_id: 3,
     tipo_comida: "Merienda",
     nombre_receta: "Yogur con granola",
     porciones: 1,
@@ -30,6 +33,7 @@ export const comidas_dia_mock = [
     ],
   },
   {
+    receta_id: 4,
     tipo_comida: recetaMock2.categoria,
     nombre_receta: recetaMock2.nombre,
     porciones: 1,

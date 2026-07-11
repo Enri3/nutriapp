@@ -22,6 +22,7 @@ interface EstadoPlanDiario {
     }>;
   };
   comidaDia?: Array<{
+    receta_id: number;
     tipo_comida: string;
     nombre_receta: string;
     porciones: number;
@@ -51,6 +52,7 @@ export default function PlanDiarioPage() {
         {comidasDelDia.map((comida) => (
           <ComidaCard
             key={comida.tipo_comida}
+            receta_id={comida.receta_id}
             tipoComida={comida.tipo_comida}
             nombreReceta={comida.nombre_receta}
             porciones={comida.porciones}
