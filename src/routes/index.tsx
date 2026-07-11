@@ -33,6 +33,7 @@ export default function AppRoutes() {
           <Route path="/compras" element={<ListaComprasPage />} />
           <Route path="/perfil" element={<PerfilPage />} />
           <Route path="/inicio" element={<PlanDiarioPage />} />
+          <Route path="/plan_diario" element={<PlanDiarioPage />} />
           <Route path="/recetas/:id" element={<DetalleRecetaPage />} />
         </Route>
       </Routes>

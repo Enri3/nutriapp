@@ -13,6 +13,27 @@ export const recetasMock = [
     tiempoPreparacion: 15,
     dificultad: "Fácil",
   },
+  {
+    id: 3,
+    nombre: "Sopa de verduras",
+    categoria: "Almuerzo",
+    tiempoPreparacion: 30,
+    dificultad: "Fácil",
+  },
+  {
+    id: 4,
+    nombre: "Tacos de pescado",
+    categoria: "Cena",
+    tiempoPreparacion: 20,
+    dificultad: "Fácil",
+  },
+  {
+    id: 5,
+    nombre: "Pasta al pesto",
+    categoria: "Almuerzo",
+    tiempoPreparacion: 25,
+    dificultad: "Fácil",
+  }
 ];
 
 export const recetaMock1 = {

@@ -1,4 +1,4 @@
-import { comidas_dia_mock } from "@/mocks/plan_diario.mock";
+import { comidas_dia_mock, comidas_dia_mock2, comidas_dia_mock3 } from "@/mocks/plan_diario.mock";
 
 export const semana_mock = [
   {
@@ -14,7 +14,7 @@ export const semana_mock = [
   {
     dia: "Miércoles",
     cantidad_comidas: 3,
-    comidas: comidas_dia_mock,
+    comidas: comidas_dia_mock2,
   },
   {
     dia: "Jueves",
@@ -29,7 +29,7 @@ export const semana_mock = [
   {
     dia: "Sábado",
     cantidad_comidas: 3,
-    comidas: comidas_dia_mock,
+    comidas: comidas_dia_mock3,
   },
   {
     dia: "Domingo",

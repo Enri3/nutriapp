@@ -8,7 +8,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 import { detalle_receta_mock } from "@/mocks/detalle_receta.mock";
+import { recetasMock } from "@/mocks/recetas.mock";
 import ClasificacionesReceta from "@/components/recetas/clasificacion";
+import AlternativasReceta from "@/components/recetas/alternatias";
 
 export default function DetalleRecetaPage() {
   const receta = detalle_receta_mock;
@@ -29,14 +31,7 @@ export default function DetalleRecetaPage() {
 
       <Card>
         <CardContent className="p-0">
-          <Accordion
-            multiple
-            defaultValue={[
-              "ingredientes",
-              "preparacion",
-            ]}
-            className="w-full px-4"
-          >
+          <Accordion multiple className="w-full px-4">
             <AccordionItem value="ingredientes">
               <AccordionTrigger>
                 Ingredientes
@@ -44,16 +39,13 @@ export default function DetalleRecetaPage() {
 
               <AccordionContent>
                 <div className="space-y-2">
-                  {receta.ingredientes.map(
-                    (ingrediente) => (
-                      <IngredienteItem
+                  {receta.ingredientes.map((ingrediente) => 
+                  (<IngredienteItem
                         key={ingrediente.nombre}
                         nombre={ingrediente.nombre}
                         cantidad={ingrediente.cantidad}
                         unidad={ingrediente.unidad}
-                      />
-                    )
-                  )}
+                    />))}
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -65,15 +57,7 @@ export default function DetalleRecetaPage() {
 
               <AccordionContent>
                 <div className="space-y-3">
-                  {receta.pasos.map(
-                    (paso, index) => (
-                      <PasoReceta
-                        key={index}
-                        numero={index + 1}
-                        descripcion={paso}
-                      />
-                    )
-                  )}
+                  {receta.pasos.map((paso, index) => (<PasoReceta key={index} numero={index + 1} descripcion={paso}/>))}
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -92,6 +76,16 @@ export default function DetalleRecetaPage() {
                 />
               </AccordionContent>
             </AccordionItem>
+
+            <AccordionItem value="alternativas">
+              <AccordionTrigger>
+                Alternativas
+              </AccordionTrigger>
+              <AccordionContent>
+                <AlternativasReceta recetas={recetasMock} />
+              </AccordionContent>
+            </AccordionItem>
+
           </Accordion>
         </CardContent>
       </Card>

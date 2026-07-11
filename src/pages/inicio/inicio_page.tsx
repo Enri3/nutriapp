@@ -44,6 +44,7 @@ export default function InicioPage() {
           </div>
 
           <ComidaCard
+            receta_id={comidas_dia_mock[1].receta_id}
             tipoComida={comidas_dia_mock[1].tipo_comida}
             nombreReceta={comidas_dia_mock[1].nombre_receta}
             porciones={comidas_dia_mock[1].porciones}
