@@ -27,7 +27,9 @@ export default function DetalleRecetaPage() {
 
       <Card>
         <CardContent className="p-0">
-          {receta.imagen_url}
+          {receta.imagen_url ? (
+            <img src={receta.imagen_url} alt={receta.nombre} className="h-full w-full object-cover" />
+          ) : null}
         </CardContent>
       </Card>
 

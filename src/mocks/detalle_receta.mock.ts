@@ -14,8 +14,7 @@ export const detalle_receta_mock = {
 
   porciones: 4,
 
-  imagen_url:
-    "https://images.unsplash.com/photo-1544025162-d76694265947",
+  imagen_url: "/assets/milanesas_al_horno.jpg",
 
   nutricion: {
     calorias: 550,

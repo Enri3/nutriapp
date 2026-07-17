@@ -5,6 +5,7 @@ export const recetasMock = [
     categoria: "Almuerzo",
     tiempoPreparacion: 45,
     dificultad: "Fácil",
+    imagenUrl: "/assets/pollo_con_arroz.jpg"
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const recetasMock = [
     categoria: "Cena",
     tiempoPreparacion: 15,
     dificultad: "Fácil",
+    imagenUrl: "/assets/ensalada_cesar.jpg"
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const recetasMock = [
     categoria: "Almuerzo",
     tiempoPreparacion: 30,
     dificultad: "Fácil",
+    imagenUrl: "/assets/sopa_de_verduras.jpg"
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ export const recetasMock = [
     categoria: "Cena",
     tiempoPreparacion: 20,
     dificultad: "Fácil",
+    imagenUrl: "/assets/tacos_de_pescado.jpg"
   },
   {
     id: 5,
@@ -33,6 +37,7 @@ export const recetasMock = [
     categoria: "Almuerzo",
     tiempoPreparacion: 25,
     dificultad: "Fácil",
+    imagenUrl: "/assets/pasta_al_pesto.jpg"
   }
 ];
 
